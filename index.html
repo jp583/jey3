@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+
+<body>
+
+    <div class="main-one-background" id="home">
+        <div class="main-one-width-container">
+            <nav class="main-one-nav-content">
+                <h1><span>P</span>rakash.</h1>
+                <ul id="sidemenu">
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#service">service</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#contact">contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+        <div class="main-one-width-container-two">
+            <div class="main-one-head-content">
+                <p><span class="auto-type"></span></p>
+                <h1>Hi i'm <span>Jeya prakash</span> From kanniyakumari</h1>
+            </div>
+
+            <script>
+
+                var typed = new Typed(".auto-type", {
+                    strings: ["Frontend developer", "Backend Developer", "UI/UX designer"],
+                    typeSpeed: 100,
+                    backSpeed: 100,
+                    backdelay: 1000,
+                    loop: true
+                })
+
+            </script>
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-150px";
+        }
+
+
+    </script>
+
+
+
+    <!-- ----------about--------- -->
+
+    <div class="main-two" id="about">
+        <div class="main-two-width">
+            <div class="col-one">
+                <img src="./images/IMG_20221222_032352.jpg">
+            </div>
+            <div class="col-two">
+                <h1>About Me</h1>
+                <p>I'm Jeya praksh from kanniyakumari,I did my bachelor degree in diploma mechanical engineering in 2015
+                    and I aspire to become a full-stack developer thats why I am currently learning full-stack
+                    development.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <P class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <P class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing web/App interfaces</li>
+                        <li><span>Web development</span><br>web App development</li>
+                        <li><span>App development</span><br>Building Android/ios apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2021-Current</span><br>ui/ux Desing training at alo hub </li>
+                        <li><span>2019-2021</span><br>TEam lead at Star app LLC.</li>
+                        <li><span>2017-2019</span><br>UI/UX Desing Executive at Coin Degital ltd.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2016</span><br>ui/ux Design Training at ET institute</li>
+                        <li><span>2015</span><br>Diploma from kamaraj ploytecnic college nagercoil</li>
+                        <li><span>2012</span><br>schooling from carmal hr sec school nagercoil</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab() {
+
+            for (tablink of tablinks) {
+                tablink.classlist.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classlist.remove("active-tab");
+            }
+        }
+
+    </script>
+
+
+    <div class="main-service" id="service">
+        <div class="main-service-width">
+            <h1>My services</h1>
+
+            <div class="main-service-split">
+                <div class="background">
+                    <i class="fa-solid fa-code"></i>
+                    <h2> Web design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sed nulla nibh,tincidunt sit amet sapien
+                        quis.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="background">
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2> UI/UX design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sed nulla nibh,tincidunt sit amet sapien
+                        quis.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="background">
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2> App design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sed nulla nibh,tincidunt sit amet sapien
+                        quis.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="work-section" id="portfolio">
+        <div class="work-section-width">
+            <h1>My work</h1>
+            <div class="work-section-split">
+                <div class="work">
+                    <img src="./images/notebook-2386034_640.jpg">
+                    <div class="layer">
+                        <h3>Socila media app</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sed nulla nibh,tincidunt sit amet
+                            sapien
+                            quis.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/macbook-air-on-desk.jpg">
+                    <div class="layer">
+                        <h3>Music app</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sed nulla nibh,tincidunt sit amet
+                            sapien
+                            quis.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="./images/flat-lay-office-desk-assortment-with-empty-screen-tablet_23-2148707960.avif">
+                    <div class="layer">
+                        <h3>online app</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sed nulla nibh,tincidunt sit amet
+                            sapien
+                            quis.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="but-main">
+        <button class="but-one">Submit</button>
+    </div>
+
+    <!-- -------contact-------- -->
+
+    <div class="contact-main" id="contact">
+        <div class="contact-width">
+            <div class="contact-left">
+                <h1>Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>contact pjp65005@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>8610626495</p>
+                <div class="social-media">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="./cv/CV PRAKASH.pdf" download=""><button class="but-two">Download CV</button></a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" placeholder="your Nmae" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="but-two">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
